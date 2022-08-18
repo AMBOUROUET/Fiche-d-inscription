@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Formulaire d'Inscription</title>
+
+    <!-- Font Icon -->
+    <link
+      rel="stylesheet"
+      href="fonts/material-icon/css/material-design-iconic-font.min.css"
+    />
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <div class="signup-content">
+          <div class="signup-img">
+            <img src="images/Secondaire.jpg" alt="" />
+          </div>
+          <div class="signup-form">
+            <form method="POST" class="register-form" id="register-form">
+              <h2>FORMULAIRE D'INSCRIPTION</h2>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Nom(s) :</label>
+                  <input type="text" name="name" id="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="father_name">Prenom(s) :</label>
+                  <input
+                    type="text"
+                    name="father_name"
+                    id="father_name"
+                    required
+                  />
+                </div>
+              </div>
+            
+              <div class="col-2">
+                <div class="input-group">
+                  <label class="label">Date de naissance</label>
+                  <div class="input-group-icon">
+                    <input
+                      class="input--style-4 js-datepicker"
+                      type="text"
+                      name="birthday"
+                    />                      
+                    <i
+                      class="zmdi zmdi-calendar-note input-icon js-btn-calendar"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-2">
+                <br>
+                <div class="input-group">
+                  <label class="label">Lieu de naissance</label>
+                  <input
+                    class="input--style-4"
+                    type="text"
+                    name="first_name"
+                  />
+                </div>
+                <br>
+                
+              <div class="form-radio">
+                <label for="gender" class="radio-label">Sexe :</label>
+                <div class="form-radio-item">
+                  <input type="radio" name="gender" id="male" checked />
+                  <label for="male">Masculin</label>
+                  <span class="check"></span>
+                </div>
+                <div class="form-radio-item">
+                  <input type="radio" name="gender" id="female" />
+                  <label for="female">Feminin</label>
+                  <span class="check"></span>
+                </div>
+              </div>
+              <div class="col-2">                
+                <div class="input-group">
+                  <label class="label">Domicile</label>
+                  <input
+                    class="input--style-4"
+                    type="text"
+                    name="first_name"
+                  />
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="email">E-mail :</label>
+                    <input type="email" name="email" id="email" />
+                  </div>
+          
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="state">Pays :</label>
+                  <div class="form-select">
+                    <select name="state" id="state">
+                      <option value=""></option>
+                      <option value="fr">Gabon</option>                      
+                    </select>
+                    <span class="select-icon"
+                      ><i class="zmdi zmdi-chevron-down"></i
+                    ></span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="city">Ville :</label>
+                  <div class="form-select">
+                    <select name="city" id="city">
+                      <option value=""></option>
+                      <option value="losangeles">Libreville</option>
+                      <option value="washington">Port-Gentil</option>
+                    </select>
+                    <span class="select-icon"
+                      ><i class="zmdi zmdi-chevron-down"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <table cellspacing="30">
+                   <td><label><strong>Annee scolaire</strong></label></td>
+                   <td><input list="Annee scolaire" id="Annee scolaire"></td>
+                   <datalist id="Annee scolaire">
+                        <option value="2022-2023">
+                        <option value="2023-2024">
+                        <option value="2024-2025">
+                        <option value="2025-2026">
+                   </datalist>
+                 </tr>
+                 <tr>
+                  <td><label><strong>Classes</strong></label></td>
+                  <td><input list="Classe" id="Classe"></td>
+                  <datalist id="Classe">
+                       <option value="6eme">
+                       <option value="5eme">
+                       <option value="4eme">
+                       <option value="3eme">
+                  </datalist>
+                </tr>
+                <tr>
+                  <td><label><strong>Vous etes</strong></label></td>
+                  <td><input list="statut" id="statut"></td>
+                  <datalist id="statut">
+                       <option value="Admis">
+                       <option value="Reboublant">                
+                  </datalist>
+                </tr>
+                 <tr>
+                  <td><label><strong>Statut</strong></label></td>
+                  <td><input list="eleve" id="eleve"></td>
+                  <datalist id="eleve">
+                       <option value="Ancien dans l'etablissement">
+                       <option value="Nouveau dans l'etablissement">                
+                  </datalist>
+                </tr>              
+              </table>
+              
+                          
+              
+              <div class="form-submit">
+                <input
+                  type="submit"
+                  value="Annuler"
+                  class="submit"
+                  name="reset"
+                  id="reset"
+                />
+                <input
+                  type="submit"
+                  value="S'inscrire"
+                  class="submit"
+                  name="submit"
+                  id="submit"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+  <!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
